@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hari haran A - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Navigation */
+        .main-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Brand Section */
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .brand-circle {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .brand-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        .brand-title {
+            font-size: 12px;
+            color: #666;
+        }
+
+        /* Desktop Navigation Links */
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background: #f0f0f0;
+            color: #667eea;
+        }
+
+        .nav-separator {
+            color: #ccc;
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            background: #f0f0f0;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-left: 20px;
+        }
+
+        /* Mobile Hamburger */
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .hamburger {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .main-nav {
+                padding: 15px 20px;
+            }
+
+            /* Hide desktop nav */
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 280px;
+                background: white;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.show {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 18px;
+                padding: 15px 30px;
+                width: 200px;
+                text-align: center;
+                border: 2px solid #f0f0f0;
+                border-radius: 10px;
+            }
+
+            .nav-links a:hover {
+                background: #667eea;
+                color: white;
+                border-color: #667eea;
+            }
+
+            .nav-separator {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .theme-toggle {
+                margin-left: 10px;
+                padding: 6px 10px;
+                font-size: 14px;
+            }
+
+            /* Smaller brand on mobile */
+            .brand-circle {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .brand-title {
+                font-size: 11px;
+            }
+        }
+
+        /* Overlay for mobile menu */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .overlay.show {
+            display: block;
+        }
+
+        /* Demo Content */
+        .content {
+            margin-top: 80px;
+            padding: 40px 20px;
+        }
+
+        .section {
+            background: white;
+            margin: 30px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+
+        .section p {
+            line-height: 1.6;
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* Dark theme */
+        body.dark {
+            background: #1a1a1a;
+            color: white;
+        }
+
+        body.dark .main-nav {
+            background: #2d2d2d;
+        }
+
+        body.dark .brand-name {
+            color: white;
+        }
+
+        body.dark .brand-title {
+            color: #aaa;
+        }
+
+        body.dark .nav-links a {
+            color: white;
+        }
+
+        body.dark .nav-links a:hover {
+            background: #444;
+        }
+
+        body.dark .nav-links {
+            background: #2d2d2d;
+        }
+
+        body.dark .section {
+            background: #2d2d2d;
+            color: white;
+        }
+
+        body.dark .section p {
+            color: #ccc;
+        }
+
+        body.dark .hamburger {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Overlay for mobile -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <!-- Brand -->
+        <div class="nav-brand">
+            <div class="brand-circle">H</div>
+            <div class="brand-info">
+                <div class="brand-name">Hari haran A</div>
+                <div class="brand-title">QA-QMS | Backend Developer</div>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links" id="mainNavLinks">
+            <li><a href="#home">Home</a></li>
+            <li class="nav-separator">|</li>
+            <li><a href="#about">About Me</a></li>
+            <li class="nav-separator">|</li>
+            <li><a href="#gallery">Gallery</a></li>
+        </ul>
+
+        <!-- Controls -->
+        <div style="display: flex; align-items: center;">
+            <button class="theme-toggle" id="themeToggle">
+                <i class="zmdi zmdi-brightness-6"></i>
+            </button>
+            
+            <!-- Mobile Hamburger -->
+            <div class="mobile-toggle" id="hamburger">
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="content">
+        <section class="section" id="home">
+            <h2>Welcome Home</h2>
+            <p>Welcome to my portfolio website. I'm Hari haran A, a QA-QMS specialist and Backend Developer. This clean, simple navigation adapts perfectly to all devices with a smooth mobile sidebar.</p>
+        </section>
+
+        <section class="section" id="about">
+            <h2>About Me</h2>
+            <p>I specialize in Quality Assurance, Quality Management Systems, and Backend Development. My focus is on creating efficient, reliable software solutions that meet the highest standards.</p>
+        </section>
+
+        <section class="section" id="gallery">
+            <h2>Gallery</h2>
+            <p>Here you'll find my projects, certifications, and professional achievements. Each project represents my commitment to quality and innovative problem-solving.</p>
+        </section>
+    </div>
+
+    <script>
+        // Get elements
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('mainNavLinks');
+        const overlay = document.getElementById('overlay');
+        const themeToggle = document.getElementById('themeToggle');
+
+        // Mobile menu toggle
+        function toggleMenu() {
+            navLinks.classList.toggle('show');
+            overlay.classList.toggle('show');
+        }
+
+        // Event listeners
+        hamburger.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking nav links
+        navLinks.addEventListener('click', function(e) {
+            if (e.target.tagName === 'A') {
+                toggleMenu();
+            }
+        });
+
+        // Theme toggle
+        themeToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

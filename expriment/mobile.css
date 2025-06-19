@@ -1,0 +1,87 @@
+@media (max-width: 991px) { 
+.icon-col{
+	margin-bottom: 1em;
+}
+}
+
+@media (max-width: 769px) { 
+nav{
+	padding: 10% 0 7% 0;
+}	
+.logo{
+	text-align: center;
+	display: block;
+    font-size: 27px;
+    margin-bottom: 1em;
+}	
+.dark-right{
+	float: none;
+	text-align: center;
+}
+.moonboi {
+    font-size: 2.8rem;
+    }
+.profile {
+    padding: 1% 1% 1% 1%;
+    text-align: center;
+ }  
+ .profile img{
+ 	float: none;
+ }  
+ .name h2 {
+    font-size: 35px;
+}
+.name {
+    margin: 27px 0 10px 0;
+    }
+.subtitle h4 {
+    font-size: 18px;
+}
+.subtitle:after{
+	display: none;
+} 
+.subtitle{
+	margin-top: 1em;
+}  
+.role-text {
+	margin-top: 1em;
+}
+.social-div {
+    margin: 10px 0 10px 0;
+}
+.hashtag{
+	margin-bottom: 2em;
+}
+.social-icon {
+    margin: 10px 0 28px 0px;
+}
+.icon-box{
+	margin-bottom: 22px;
+	padding: 3% 2% 1% 5%;
+}
+.icon-name{
+	text-align: center;
+}
+.about-box {
+    padding: 15px 10px 30px 10px;
+}
+.tech-box {
+    padding: 6%;
+}
+.stack-box{
+	margin-top: 2em;
+}
+.tech-box p{
+	font-size: 13px;
+	margin-top: 2em;
+}
+.img-skill {
+    padding-top: 5%;
+}
+.icon-col{
+	padding: 3% 10% 0 10%;
+}
+.works-text{
+	margin: 1em 0;
+  }
+}
