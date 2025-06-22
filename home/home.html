@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS --> 
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -27,24 +27,21 @@
     <div class="cursor-dot-outline"></div>
     <div class="cursor-dot"></div>
 
-    <!-- Top Navigation with Theme Toggle -->
-  
-
     <!-- Main Navigation -->
     <nav class="main-nav">
       <div class="nav-brand">
         <div class="brand-circle"></div>
-        <div></div>
+        <div>
           <strong class="brand-name">Hari haran A</strong>
           <small class="brand-title">QA-QMS | Backend Developer</small>
         </div>
       </div>
       <ul class="nav-links">
-        <li><a href="../home/home.html">Home</a></li>
+        <li><a href="./home.html">Home</a></li>
         <li class="nav-separator">|</li>
-        <li><a href="about.html">About Me</a></li>
+        <li><a href="../About/about.html">About Me</a></li>
         <li class="nav-separator">|</li>
-        <li><a href="../Gallery/Gallery.html">Gallery </a></li>
+        <li><a href="../Gallery/index.html">Gallery</a></li>
       </ul>
       <div class="dark-right">
         <div class="theme-switch-wrapper">
@@ -55,58 +52,24 @@
         </div>
       </div>
     </nav>
-    </nav>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container box-layout">
-            <div class="about-image-wrapper box-image">
-                <img src="../undraw_coding_joxb.png" alt="Profile Picture" class="about-pic-rect">
-            </div>
-            <div class="about-content">
-                <h1 class="about-title">About Me</h1>
-                <h5 class="about-subtitle">QA-QMS Specialist & Backend Developer</h5>
-                <p class="about-description">
-                    I am a dedicated Quality Management Specialist with hands-on experience in pharmaceutical quality systems, regulatory compliance, and digital documentation control. Over the years, I’ve been actively involved in managing CAPA systems, audit preparedness, regulatory inspections, and change management processes, ensuring that all operations align with GMP standards and global compliance expectations. My proficiency in tools like TrackWise, D2 Documentum, and MES platforms has enabled me to streamline workflows, enhance traceability, and support cross-functional teams effectively.
-
-I have successfully designed MES workflows, authored SOPs for critical manufacturing equipment, and led investigations that required a deep understanding of process deviation analysis and root cause identification. As an LMS Administrator, I’ve helped implement training programs and maintain regulatory training records, promoting a culture of continuous learning and compliance.
-
-Beyond my core profession, I am deeply passionate about Java Backend Development, with a focus on building scalable, secure, and efficient enterprise applications. My expertise spans across Spring Core, Spring MVC, Spring Boot, Spring Data JPA, Spring Security, and Spring Cloud. I’ve built and optimized RESTful APIs, implemented authentication and authorization using Spring Security, and handled data operations with PostgreSQL and MongoDB.
-
-I enjoy solving complex backend challenges through microservices architecture, event-driven design with Kafka, and containerized deployment using Docker and Kubernetes. My goal is to leverage my unique combination of domain knowledge in pharma and technical expertise in backend systems to bridge the gap between industry operations and smart software solutions.
-
-Whether it’s improving quality systems or architecting backend solutions, I thrive on solving real-world problems and continuously learning new technologies that push boundaries.
-                </p>
-      
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <img src="IMG_20241022_133616_220.webp" alt="Profile Photo" class="profile-pic">
+        <div class="intro-text">
+            <h1>Hello</h1>
+            <h5>A Bit About Me</h5>
+            <p>
+                "Quality-focused pharma QMS expert with backend <b><i>#Java development passion</i></b>. 
+                Proficient in TrackWise, MES, Spring Boot & Docker. Bridging domain knowledge with tech to solve real-world problems."
+            </p>
+            <div class="button-row">
+                <a href="../Portfolio/Skile/Skile.html" class="circle-icon resume">Skills</a>
+                <a href="../Portfolio/Project/project.html" class="circle-icon projects">Projects</a>
+                <a href="../Contact/index.html" class="circle-icon contact">Contact</a>
             </div>
         </div>
-    </section>
-
-    <!-- Additional Content Section (Image Right, Text Left) -->
-    <section id="additional-content" class="contact-section">
-        <div class="contact-container box-layout">
-            <div class="contact-content">
-                <h1 class="contact-title">Professional Values</h1>
-                <h5 class="contact-subtitle">Driven by Quality & Innovation</h5>
-                <p class="contact-description">
-                    My approach combines <b>attention to detail</b> and <b>continuous improvement</b> with a strong belief in <b>collaboration</b> and <b>innovation</b>. I strive to deliver solutions that not only meet compliance but also drive business value and efficiency.
-                </p>
-                <ul class="contact-info-list">
-                    <li class="contact-info-item"><b>Location:</b> Chennai, India</li>
-                    <li class="contact-info-item"><b>Languages:</b> English, Tamil</li>
-                    <li class="contact-info-item"><b>Experience:</b> 4+ years in Pharma & IT</li>
-                </ul>
-                <div class="contact-buttons">
-                    <a href="#contact" class="contact-btn" tabindex="0">Get in Touch</a>
-                    <a href="#projects" class="contact-btn" tabindex="0">See My Work</a>
-                </div>
-            </div>
-            <div class="contact-image-wrapper box-image">
-                <img src="../undraw_dev-productivity_5wps.png" alt="Professional Values" class="contact-pic-rect">
-            </div>
-        </div>
-    </section>
-
+    </div>
 
     <!-- Footer -->
      <footer>
@@ -137,13 +100,13 @@ Whether it’s improving quality systems or architecting backend solutions, I th
             <div class="footer-content">
                 <strong>Follow Me</strong>
                 <div class="social-links">
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://www.linkedin.com/in/hari-haran-a-65206332b/" target="_blank" rel="noopener noreferrer" class="social-link">
                         <svg class="footer-icon" viewBox="0 0 24 24">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                         </svg>
                         LinkedIn
                     </a>
-                    <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <a href="https://www.instagram.com/hari_dood_/" target="_blank" rel="noopener noreferrer" class="social-link">
                         <svg class="footer-icon" viewBox="0 0 24 24">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
